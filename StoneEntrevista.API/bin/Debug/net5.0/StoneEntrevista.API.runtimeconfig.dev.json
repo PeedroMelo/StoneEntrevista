@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/vieirapcm/.dotnet/store/|arch|/|tfm|",
+      "/home/vieirapcm/.nuget/packages"
+    ]
+  }
+}
