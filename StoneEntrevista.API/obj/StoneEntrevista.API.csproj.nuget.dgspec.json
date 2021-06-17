@@ -25,7 +25,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj": {
+                "projectPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj"
+              },
+              "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/StoneEntrevista.Infra.Data.csproj": {
+                "projectPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/StoneEntrevista.Infra.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -57,6 +64,114 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj",
+        "projectName": "StoneEntrevista.Application",
+        "projectPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj",
+        "packagesPath": "/home/vieirapcm/.nuget/packages/",
+        "outputPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/vieirapcm/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/StoneEntrevista.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/StoneEntrevista.Infra.Data.csproj",
+        "projectName": "StoneEntrevista.Infra.Data",
+        "projectPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/StoneEntrevista.Infra.Data.csproj",
+        "packagesPath": "/home/vieirapcm/.nuget/packages/",
+        "outputPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/vieirapcm/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj": {
+                "projectPath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/StoneEntrevista.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

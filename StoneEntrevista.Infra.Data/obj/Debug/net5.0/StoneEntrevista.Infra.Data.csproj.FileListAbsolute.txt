@@ -1,0 +1,15 @@
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/StoneEntrevista.Infra.Data.deps.json
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/StoneEntrevista.Infra.Data.dll
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/ref/StoneEntrevista.Infra.Data.dll
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/StoneEntrevista.Infra.Data.pdb
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/StoneEntrevista.Application.dll
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/bin/Debug/net5.0/StoneEntrevista.Application.pdb
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.csproj.AssemblyReference.cache
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.AssemblyInfoInputs.cache
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.AssemblyInfo.cs
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.csproj.CoreCompileInputs.cache
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.csproj.CopyComplete
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.dll
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/ref/StoneEntrevista.Infra.Data.dll
+/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Infra.Data/obj/Debug/net5.0/StoneEntrevista.Infra.Data.pdb

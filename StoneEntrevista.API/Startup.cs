@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using StoneEntrevista.Application.Interfaces;
+using StoneEntrevista.Infra.Data.Repositories;
 
 namespace StoneEntrevista.API
 {
@@ -28,6 +23,9 @@ namespace StoneEntrevista.API
         {
 
             services.AddControllers();
+
+            services.AddScoped<IFuncionariosRepo, MockFuncionariosRepo>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StoneEntrevista.API", Version = "v1" });

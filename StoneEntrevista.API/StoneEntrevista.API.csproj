@@ -8,4 +8,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StoneEntrevista.Application\StoneEntrevista.Application.csproj" />
+    <ProjectReference Include="..\StoneEntrevista.Infra.Data\StoneEntrevista.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
