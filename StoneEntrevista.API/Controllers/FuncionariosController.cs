@@ -9,11 +9,11 @@ namespace StoneEntrevista.API.Controllers
 	[ApiController]
 	public class FuncionariosController : ControllerBase
 	{
-		private readonly IFuncionariosRepo _mockFuncionariosRepository;
+		private readonly IFuncionariosRepo _funcionariosRepository;
 
    		public FuncionariosController(IFuncionariosRepo funcionariosRepository)
 		{
-			_mockFuncionariosRepository = funcionariosRepository;
+			_funcionariosRepository = funcionariosRepository;
 		}
 
 		/// <summary>
@@ -23,7 +23,7 @@ namespace StoneEntrevista.API.Controllers
 		[HttpGet]
 		public ActionResult <List<Funcionario>> getAll()
 		{
-			return Ok(_mockFuncionariosRepository.BuscarFuncionarios());
+			return Ok(_funcionariosRepository.BuscarFuncionarios());
 		}
 	}
 }

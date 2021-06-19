@@ -8,4 +8,9 @@
     <ProjectReference Include="..\StoneEntrevista.Application\StoneEntrevista.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0-preview.5.21301.5" />
+    <PackageReference Include="MongoDB.Driver" Version="2.12.4" />
+  </ItemGroup>
+
 </Project>
