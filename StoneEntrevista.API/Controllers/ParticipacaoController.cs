@@ -22,6 +22,9 @@ namespace ParticipacaoLucros.Controllers
             ParticipacaoService participacaoService = new ParticipacaoService();
 
             var participacao = participacaoService.CalcularParticipacao(_mockFuncionariosRepository.BuscarFuncionarios());
+            if (participacao.TotalFuncionarios == 0) {
+                return Content("Nenhum funcionário encontrado. Verifique a base de dados e tente novamente.");
+            }
             return Ok(participacao);
         }
     }

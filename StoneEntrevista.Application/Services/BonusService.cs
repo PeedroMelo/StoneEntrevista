@@ -16,34 +16,34 @@ namespace StoneEntrevista.Application.Services
 
         public BonusService(Funcionario funcionario)
         {
+            _salarioBruto = funcionario.SalarioBruto;
+
             _pesoFaixaSalarial = CalcularFaixaSalarial();
             _pesoTempoAdmissao = CalcularTempoAdmissao(funcionario.DataAdmissao);
             _pesoAreaAtuacao = CalcularAreaAtuacao(funcionario.Area);
-
-            _salarioBruto = funcionario.SalarioBruto;
         }
 
         public double CalcularBonus()
         {
             double bonus = ((_salarioBruto * _pesoTempoAdmissao + _salarioBruto * _pesoAreaAtuacao) / (_salarioBruto * _pesoFaixaSalarial)) * 12;
-
+            
             return double.Parse((_salarioBruto * bonus / 100).ToString("F2", CultureInfo.InvariantCulture));
         }
 
         private int CalcularFaixaSalarial()
         {
-            double salarioMinimo = 1100.00;
             int pesoFaixaSalarial;
+            double salarioMinimo = 1100.00;
 
-            if (_salarioBruto > salarioMinimo * 8)
+            if (_salarioBruto > (salarioMinimo * 8))
             {
                 pesoFaixaSalarial = 5;
             }
-            else if (_salarioBruto > salarioMinimo * 5 && _salarioBruto <= salarioMinimo * 8)
+            else if (_salarioBruto > (salarioMinimo * 5))
             {
                 pesoFaixaSalarial = 3;
             }
-            else if (_salarioBruto > salarioMinimo * 3 && _salarioBruto <= salarioMinimo * 5)
+            else if (_salarioBruto > (salarioMinimo * 3))
             {
                 pesoFaixaSalarial = 2;
             }

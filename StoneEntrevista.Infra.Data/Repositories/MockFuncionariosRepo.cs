@@ -15,7 +15,6 @@ namespace StoneEntrevista.Infra.Data.Repositories
 				{
                     Matricula = "0009968",
                     Nome = "Victor Wilson",
-					// Cargo = new Cargo { CargoDescricao="Diretor Financeiro", Area = new Area { AreaDescricao="Diretoria" }},
 					Area="Diretoria",
 					Cargo="Diretor Financeiro",
                     SalarioBruto=12696.20,
@@ -25,7 +24,6 @@ namespace StoneEntrevista.Infra.Data.Repositories
 				{
 					Matricula="0004468",
 					Nome="Flossie Wilson",
-					// Cargo = new Cargo { CargoDescricao="Auxiliar de Contabilidade", Area = new Area { AreaDescricao="Contabilidade" }},
 					Area="Contabilidade",
 					Cargo="Auxiliar de Contabilidade",
 					SalarioBruto=1396.52,
@@ -33,9 +31,8 @@ namespace StoneEntrevista.Infra.Data.Repositories
 				},
                 new Funcionario
 				{
-					Matricula="0009968",
-					Nome="Victor Wilson",
-					// Cargo = new Cargo { CargoDescricao="Líder de Relacionamento", Area = new Area { AreaDescricao="Relacionamento com o Cliente" }},
+					Matricula="0008174",
+					Nome="Sherman Hodges",
 					Area="Relacionamento com o Cliente",
 					Cargo="Líder de Relacionamento",
 					SalarioBruto=3899.74,
@@ -45,11 +42,37 @@ namespace StoneEntrevista.Infra.Data.Repositories
 				{
 					Matricula="0007463",
 					Nome="Charlotte Romero",
-					// Cargo = new Cargo { CargoDescricao="Contador Pleno", Area = new Area { AreaDescricao="Financeiro" }},
 					Area="Financeiro",
 					Cargo="Contador Pleno",
 					SalarioBruto=3199.82,
 					DataAdmissao=new DateTime(2018, 01, 03)
+				},
+				new Funcionario
+				{
+					Matricula="0005253",
+					Nome="Wong Austin",
+					Area="Financeiro",
+					Cargo="Economista Júnior",
+					SalarioBruto=2215.04,
+					DataAdmissao=new DateTime(2016, 08, 27)
+				},
+				new Funcionario
+				{
+					Matricula="0004867",
+					Nome="Danielle Blanchard",
+					Area="Diretoria",
+					Cargo="Auxiliar Administrativo",
+					SalarioBruto=2768.28,
+					DataAdmissao=new DateTime(2015, 10, 17)
+				},
+				new Funcionario
+				{
+					Matricula="0001843",
+					Nome="Daugherty Kramer",
+					Area="Serviços Gerais",
+					Cargo="Atendente de Almoxarifado",
+					SalarioBruto=2120.08,
+					DataAdmissao=new DateTime(2016, 04, 21)
 				}
             };
 
