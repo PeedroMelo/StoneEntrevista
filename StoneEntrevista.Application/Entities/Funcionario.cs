@@ -8,6 +8,7 @@ namespace StoneEntrevista.Application.Entities
     public class Funcionario
     {
 		[BsonId]
+		[JsonIgnore]
 		public ObjectId Id { get; set; }
 
 		[BsonElement("matricula")]
