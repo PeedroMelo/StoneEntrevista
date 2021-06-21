@@ -40,11 +40,14 @@ namespace StoneEntrevista.API.Controllers
 		[HttpPost]
 		public ActionResult<Funcionario> AddFuncionario(Funcionario funcionario)
 		{
-			_funcionariosRepository.Add(funcionario);
+            Funcionario funcionarioData = _funcionariosRepository.GetById(funcionario.Matricula);
 
-			Funcionario funcionarioData = _funcionariosRepository.GetById(funcionario.Matricula);
+            if (funcionarioData == null)
+            {
+			    _funcionariosRepository.Add(funcionario);
+            }
 
-			return Ok(funcionarioData);
+			return Ok(_funcionariosRepository.GetById(funcionario.Matricula));
 		}
     }
 }
