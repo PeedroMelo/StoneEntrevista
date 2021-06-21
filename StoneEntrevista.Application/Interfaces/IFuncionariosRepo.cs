@@ -5,6 +5,8 @@ namespace StoneEntrevista.Application.Interfaces
 {
     public interface IFuncionariosRepo
     {
-        public List<Funcionario> BuscarFuncionarios();
+        public List<Funcionario> GetAll();
+        public Funcionario GetById(string matricula);
+        public void Add(Funcionario funcionario);
     }
 }

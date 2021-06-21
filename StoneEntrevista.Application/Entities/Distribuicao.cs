@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace StoneEntrevista.Application.Entities
 {
@@ -9,13 +11,16 @@ namespace StoneEntrevista.Application.Entities
         public int TotalFuncionarios { get; set; }
         
         [JsonPropertyName("total_distribuido")]
-        public double TotalDistribuido { get; set; }
+        [BsonRepresentation(BsonType.Decimal128)]
+        public decimal TotalDistribuido { get; set; }
         
         [JsonPropertyName("total_disponibilizado")]
-        public double TotalDisponibilizado { get; set; }
+        [BsonRepresentation(BsonType.Decimal128)]
+        public decimal TotalDisponibilizado { get; set; }
         
         [JsonPropertyName("saldo_total_disponibilizado")]
-        public double SaldoTotalDisponibilizado { get; set; }
+        [BsonRepresentation(BsonType.Decimal128)]
+        public decimal SaldoTotalDisponibilizado { get; set; }
         
         [JsonPropertyName("participacoes")]
         public List<Participacao> Participacoes { get; set; }

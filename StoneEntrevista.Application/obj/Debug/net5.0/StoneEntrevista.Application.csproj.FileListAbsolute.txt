@@ -9,4 +9,3 @@
 /home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/obj/Debug/net5.0/StoneEntrevista.Application.dll
 /home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/obj/Debug/net5.0/ref/StoneEntrevista.Application.dll
 /home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/obj/Debug/net5.0/StoneEntrevista.Application.pdb
-/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.Application/obj/Debug/net5.0/StoneEntrevista.Application.csproj.AssemblyReference.cache

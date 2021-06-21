@@ -11,22 +11,23 @@ namespace StoneEntrevista.Application.Entities
 		[JsonIgnore]
 		public ObjectId Id { get; set; }
 
-		[BsonElement("matricula")]
+		[JsonPropertyName("matricula")]
         public string Matricula { get; set; }
 
-		[BsonElement("nome")]
+		[JsonPropertyName("nome")]
 		public string Nome { get; set; }
 
-		[BsonElement("cargo")]
+		[JsonPropertyName("cargo")]
 		public string Cargo { get; set; }
 
-		[BsonElement("area")]
+		[JsonPropertyName("area")]
 		public string Area { get; set; }
 
-		[BsonElement("salario_bruto")]
-		public double SalarioBruto { get; set; }
+		[JsonPropertyName("salario_bruto")]
+		[BsonRepresentation(BsonType.Decimal128)]
+		public decimal SalarioBruto { get; set; }
 
-		[BsonElement("data_admissao")]
+		[JsonPropertyName("data_de_admissao")]
 		public DateTime DataAdmissao { get; set; }
     }
 }

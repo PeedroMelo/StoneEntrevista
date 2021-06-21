@@ -12,7 +12,7 @@ namespace StoneEntrevista.Application.Services
 
         private int _pesoAreaAtuacao { get; set; }
 
-        private double _salarioBruto { get; set; }
+        private decimal _salarioBruto { get; set; }
 
         public BonusService(Funcionario funcionario)
         {
@@ -23,17 +23,17 @@ namespace StoneEntrevista.Application.Services
             _pesoAreaAtuacao = CalcularAreaAtuacao(funcionario.Area);
         }
 
-        public double CalcularBonus()
+        public decimal CalcularBonus()
         {
-            double bonus = ((_salarioBruto * _pesoTempoAdmissao + _salarioBruto * _pesoAreaAtuacao) / (_salarioBruto * _pesoFaixaSalarial)) * 12;
+            decimal bonus = ((_salarioBruto * _pesoTempoAdmissao + _salarioBruto * _pesoAreaAtuacao) / (_salarioBruto * _pesoFaixaSalarial)) * 12;
             
-            return double.Parse((_salarioBruto * bonus / 100).ToString("F2", CultureInfo.InvariantCulture));
+            return decimal.Parse((_salarioBruto * bonus / 100).ToString("F2", CultureInfo.InvariantCulture));
         }
 
         private int CalcularFaixaSalarial()
         {
             int pesoFaixaSalarial;
-            double salarioMinimo = 1100.00;
+            decimal salarioMinimo = (decimal) 1000.00;
 
             if (_salarioBruto > (salarioMinimo * 8))
             {

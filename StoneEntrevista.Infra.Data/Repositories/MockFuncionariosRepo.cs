@@ -7,7 +7,12 @@ namespace StoneEntrevista.Infra.Data.Repositories
 {
     public class MockFuncionariosRepo : IFuncionariosRepo
     {
-        public List<Funcionario> BuscarFuncionarios()
+        public void Add(Funcionario funcionario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Funcionario> GetAll()
         {
             List<Funcionario> funcionario = new List<Funcionario>
             {
@@ -17,7 +22,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
                     Nome = "Victor Wilson",
 					Area="Diretoria",
 					Cargo="Diretor Financeiro",
-                    SalarioBruto=12696.20,
+                    SalarioBruto= (decimal) 12696.20,
                     DataAdmissao=new DateTime(2012, 01, 05)
                 },
                 new Funcionario
@@ -26,7 +31,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Flossie Wilson",
 					Area="Contabilidade",
 					Cargo="Auxiliar de Contabilidade",
-					SalarioBruto=1396.52,
+					SalarioBruto= (decimal) 1396.52,
 					DataAdmissao=new DateTime(2015, 01, 05)
 				},
                 new Funcionario
@@ -35,7 +40,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Sherman Hodges",
 					Area="Relacionamento com o Cliente",
 					Cargo="Líder de Relacionamento",
-					SalarioBruto=3899.74,
+					SalarioBruto= (decimal) 3899.74,
 					DataAdmissao=new DateTime(2015, 06, 07)
 				},
                 new Funcionario
@@ -44,7 +49,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Charlotte Romero",
 					Area="Financeiro",
 					Cargo="Contador Pleno",
-					SalarioBruto=3199.82,
+					SalarioBruto= (decimal) 3199.82,
 					DataAdmissao=new DateTime(2018, 01, 03)
 				},
 				new Funcionario
@@ -53,7 +58,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Wong Austin",
 					Area="Financeiro",
 					Cargo="Economista Júnior",
-					SalarioBruto=2215.04,
+					SalarioBruto= (decimal) 2215.04,
 					DataAdmissao=new DateTime(2016, 08, 27)
 				},
 				new Funcionario
@@ -62,7 +67,7 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Danielle Blanchard",
 					Area="Diretoria",
 					Cargo="Auxiliar Administrativo",
-					SalarioBruto=2768.28,
+					SalarioBruto= (decimal) 2768.28,
 					DataAdmissao=new DateTime(2015, 10, 17)
 				},
 				new Funcionario
@@ -71,12 +76,17 @@ namespace StoneEntrevista.Infra.Data.Repositories
 					Nome="Daugherty Kramer",
 					Area="Serviços Gerais",
 					Cargo="Atendente de Almoxarifado",
-					SalarioBruto=2120.08,
+					SalarioBruto= (decimal) 2120.08,
 					DataAdmissao=new DateTime(2016, 04, 21)
 				}
             };
 
             return funcionario;
+        }
+
+        public Funcionario GetById(string matricula)
+        {
+            throw new NotImplementedException();
         }
     }
 }

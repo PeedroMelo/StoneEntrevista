@@ -25,9 +25,26 @@ namespace StoneEntrevista.Infra.Data.Repositories
             }
         }
 
-        public List<Funcionario> BuscarFuncionarios()
+        public void Add(Funcionario funcionario)
+        {
+            try
+            {
+                _collection.InsertOne(funcionario);
+            }
+            catch (System.Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public List<Funcionario> GetAll()
         {
             return _collection.Find(funcionario => true).ToList();
+        }
+
+        public Funcionario GetById(string matricula)
+        {
+            return _collection.Find<Funcionario>(funcionario => funcionario.Matricula == matricula).FirstOrDefault();
         }
     }
 }

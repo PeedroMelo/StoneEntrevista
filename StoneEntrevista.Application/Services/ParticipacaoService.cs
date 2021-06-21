@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using StoneEntrevista.Application.Entities;
 
@@ -6,18 +7,23 @@ namespace StoneEntrevista.Application.Services
 {
     public class ParticipacaoService
     {
-        public double TotalDisponibilizado { get; set; }
+        public decimal _totalDisponibilizado { get; set; } = 0;
+
+        public ParticipacaoService(decimal totalDisponibilizado)
+        {
+            _totalDisponibilizado = totalDisponibilizado;
+        }
 
         public Distribuicao CalcularParticipacao(List<Funcionario> funcionarios)
         {
             List<Participacao> participacoes = new List<Participacao>();
 
-            double totalDistribuido = 0;
+            decimal totalDistribuido = 0;
 
             foreach (Funcionario funcionario in funcionarios)
             {
                 BonusService bonusService = new BonusService(funcionario);
-                double valorParticipacao = bonusService.CalcularBonus();
+                decimal valorParticipacao = bonusService.CalcularBonus();
 
                 totalDistribuido += valorParticipacao;
 
@@ -34,9 +40,10 @@ namespace StoneEntrevista.Application.Services
             Distribuicao distribuicao = new Distribuicao();
 
             distribuicao.TotalFuncionarios = participacoes.Count();
-            distribuicao.TotalDisponibilizado = 1000000.00;
+            distribuicao.TotalDisponibilizado =_totalDisponibilizado;
+                // .ToString("C2", CultureInfo.CreateSpecificCulture("pt-BR"));
             distribuicao.TotalDistribuido = totalDistribuido;
-            distribuicao.SaldoTotalDisponibilizado = distribuicao.TotalDisponibilizado - totalDistribuido;
+            distribuicao.SaldoTotalDisponibilizado =_totalDisponibilizado - totalDistribuido;
             distribuicao.Participacoes = participacoes;
 
             return distribuicao;
