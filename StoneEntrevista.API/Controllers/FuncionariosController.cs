@@ -17,15 +17,20 @@ namespace StoneEntrevista.API.Controllers
         }
 
         /// <summary>
-        /// Get the list of employees
+        /// Retorna a lista completa dos funcionários cadastrados no sistema.
         /// </summary>
-        /// <returns>Employees list</returns>
+        /// <returns>Lista de funcionários</returns>
         [HttpGet]
         public ActionResult<List<Funcionario>> getAll()
         {
             return Ok(_funcionariosRepository.GetAll());
         }
 
+        /// <summary>
+        /// Retorna o funcionário baseado em seu número de matrícula.
+        /// </summary>
+        /// <param name="matricula">Número da martícula. Ex: 0007676</param>
+        /// <returns>Objeto contendo os dados do funcionário.</returns>
         [HttpGet("{matricula}", Name = "GetFuncionarioByMatricula")]
         public ActionResult<Funcionario> GetFuncionarioByMatricula(string matricula)
         {
@@ -40,6 +45,11 @@ namespace StoneEntrevista.API.Controllers
             return Ok(_funcionariosRepository.GetById(matricula));
         }
 
+        /// <summary>
+        /// Cadastro de um novo usuário.
+        /// </summary>
+        /// <param name="funcionario">Objeto com os dados do funcionário.</param>
+        /// <returns>Objeto contendo os dados do funcionário.</returns>
         [HttpPost]
         public ActionResult<Funcionario> AddFuncionario(Funcionario funcionario)
         {

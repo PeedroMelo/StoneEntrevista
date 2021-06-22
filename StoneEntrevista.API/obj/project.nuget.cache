@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GDCHb1EMctvwvVgI0eGR9EkF9prYOgRbwWyq8N80ekoOF9hxTqh+FeftfBd9RbQ57W5oDQp04Fv+bF+1E7BZqg==",
+  "dgSpecHash": "RvKlByecf7B2wsMJorSQyXwzwZpZE+m9zPQ5aAbWFtMvVWssj0Ka9Fv2tcDlQD4+wujY8yUv1MCThf0VpT7X5Q==",
   "success": true,
   "projectFilePath": "/home/vieirapcm/projetos/StoneEntrevista/StoneEntrevista.API/StoneEntrevista.API.csproj",
   "expectedPackageFiles": [
@@ -16,10 +16,10 @@
     "/home/vieirapcm/.nuget/packages/mongodb.driver.core/2.12.4/mongodb.driver.core.2.12.4.nupkg.sha512",
     "/home/vieirapcm/.nuget/packages/mongodb.libmongocrypt/1.2.1/mongodb.libmongocrypt.1.2.1.nupkg.sha512",
     "/home/vieirapcm/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
-    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore/6.1.4/swashbuckle.aspnetcore.6.1.4.nupkg.sha512",
+    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swagger/6.1.4/swashbuckle.aspnetcore.swagger.6.1.4.nupkg.sha512",
+    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.1.4/swashbuckle.aspnetcore.swaggergen.6.1.4.nupkg.sha512",
+    "/home/vieirapcm/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.1.4/swashbuckle.aspnetcore.swaggerui.6.1.4.nupkg.sha512",
     "/home/vieirapcm/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/home/vieirapcm/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0-preview.5.21301.5/system.runtime.compilerservices.unsafe.6.0.0-preview.5.21301.5.nupkg.sha512",
     "/home/vieirapcm/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512"
