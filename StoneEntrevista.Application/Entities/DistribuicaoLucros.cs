@@ -5,7 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace StoneEntrevista.Application.Entities
 {
-    public class Distribuicao
+    public class DistribuicaoLucros
     {
         [JsonPropertyName("total_de_funcionarios")]
         public int TotalFuncionarios { get; set; }
@@ -25,7 +25,7 @@ namespace StoneEntrevista.Application.Entities
         [JsonPropertyName("participacoes")]
         public List<Participacao> Participacoes { get; set; }
 
-        public Distribuicao()
+        public DistribuicaoLucros()
         {
         }
     }

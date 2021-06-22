@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using StoneEntrevista.Application.Interfaces;
 using StoneEntrevista.Application.Services;
+using StoneEntrevista.Application.Helpers;
 
 namespace ParticipacaoLucros.Controllers
 {
@@ -25,21 +26,28 @@ namespace ParticipacaoLucros.Controllers
                 return StatusCode(401, "Campo \"Total disponibilizado\" não pode estar zerado.");
             }
 
-            ParticipacaoService participacaoService = new ParticipacaoService(totalDisponibilizado);
+            DistribuicaoLucrosService distribuicaoLucrosService = new DistribuicaoLucrosService(totalDisponibilizado);
 
-            var participacao = participacaoService.CalcularParticipacao(_funcionariosRepository.GetAll());
+            var distribuicao = distribuicaoLucrosService.CalcularDistribuicao(_funcionariosRepository.GetAll());
 
-            if (participacao.TotalFuncionarios == 0)
+            if (distribuicao.TotalFuncionarios == 0)
             {
                 return Content("Nenhum funcionário encontrado. Verifique a base de dados e tente novamente.");
             }
 
-            if (participacao.SaldoTotalDisponibilizado < 0)
+            if (distribuicao.SaldoTotalDisponibilizado < 0)
             {
                 return Content("Infelizmente, valor disponibilizado foi menor que o valor distribuído.");
             }
 
-            return Ok(participacao);
+            return Ok(new
+            {
+                total_funcionarios = distribuicao.TotalFuncionarios,
+                total_distribuidos = CurrencySerializer.DecimalToString(distribuicao.TotalDistribuido),
+                total_disponibilizado = CurrencySerializer.DecimalToString(distribuicao.TotalDisponibilizado),
+                saldo_total_disponibilizado = CurrencySerializer.DecimalToString(distribuicao.SaldoTotalDisponibilizado),
+                distribuicao.Participacoes
+            });
         }
     }
 }

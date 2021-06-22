@@ -17,11 +17,18 @@ namespace StoneEntrevista.Infra.Data.Repositories
 
         public FuncionariosRepo(IOptions<MongoConnectionConfig> mongoConnectionConfig)
         {
-            _mongoDbContext = new MongoDbContext(mongoConnectionConfig);
-            _collection = _mongoDbContext.GetCollection<Funcionario>();
-            if (_collection != null)
+            try
             {
-                System.Console.WriteLine("Collection reached.");
+                _mongoDbContext = new MongoDbContext(mongoConnectionConfig);
+                _collection = _mongoDbContext.GetCollection<Funcionario>();
+                if (_collection != null)
+                {
+                    System.Console.WriteLine("Collection reached.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Fail to connect to database: {e.Message}");
             }
         }
 
@@ -31,9 +38,9 @@ namespace StoneEntrevista.Infra.Data.Repositories
             {
                 _collection.InsertOne(funcionario);
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                throw e;
+                throw new Exception($"Fail to insert a new documento to database: {e.Message}");
             }
         }
 

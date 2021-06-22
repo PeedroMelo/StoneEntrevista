@@ -7,8 +7,7 @@ namespace StoneEntrevista.Application.Entities
     public class Participacao
     {
         [JsonPropertyName("valor_da_participacao")]
-        [BsonRepresentation(BsonType.Decimal128)]
-        public decimal ValorParticipacao { get; set; }
+        public string ValorParticipacao { get; set; }
         
         [JsonPropertyName("nome")]
         public string Nome { get; set; }

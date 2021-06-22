@@ -5,12 +5,12 @@ using StoneEntrevista.Application.Entities;
 
 namespace StoneEntrevista.Application.UnitTest.Entities
 {
-    public class DistribuicaoTests
+    public class DistribuicaoLucrosTests
     {
         [Fact]
-        public void Distribuicao_DeveriaInstanciarCorretamente()
+        public void DistribuicaoLucros_DeveriaInstanciarCorretamente()
         {
-            Distribuicao distribuicao = new Distribuicao
+            DistribuicaoLucros distribuicao = new DistribuicaoLucros
             {
                 TotalFuncionarios = 1,
                 TotalDistribuido = 1000m,
@@ -23,9 +23,9 @@ namespace StoneEntrevista.Application.UnitTest.Entities
         }
 
         [Fact]
-        public void Distribuicao_DeveriaHaverPeloMenosUmFuncionario()
+        public void DistribuicaoLucros_DeveriaHaverPeloMenosUmFuncionario()
         {
-            Distribuicao distribuicao = new Distribuicao
+            DistribuicaoLucros distribuicao = new DistribuicaoLucros
             {
                 TotalFuncionarios = 1,
                 TotalDistribuido = 1000m,
@@ -36,9 +36,9 @@ namespace StoneEntrevista.Application.UnitTest.Entities
         }
 
         [Fact]
-        public void Distribuicao_DeveriaDisponibilizarUmValorPositivo()
+        public void DistribuicaoLucros_DeveriaDisponibilizarUmValorPositivo()
         {
-            Distribuicao distribuicao = new Distribuicao
+            DistribuicaoLucros distribuicao = new DistribuicaoLucros
             {
                 TotalFuncionarios = 1,
                 TotalDistribuido = 1000m,

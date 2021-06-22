@@ -2,19 +2,21 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using StoneEntrevista.Application.Entities;
+using StoneEntrevista.Application.Interfaces;
+using StoneEntrevista.Application.Helpers;
 
 namespace StoneEntrevista.Application.Services
 {
-    public class ParticipacaoService
+    public class DistribuicaoLucrosService : IDistribuicaoLucrosService
     {
         public decimal _totalDisponibilizado { get; set; } = 0;
 
-        public ParticipacaoService(decimal totalDisponibilizado)
+        public DistribuicaoLucrosService(decimal totalDisponibilizado)
         {
             _totalDisponibilizado = totalDisponibilizado;
         }
 
-        public Distribuicao CalcularParticipacao(List<Funcionario> funcionarios)
+        public DistribuicaoLucros CalcularDistribuicao(List<Funcionario> funcionarios)
         {
             List<Participacao> participacoes = new List<Participacao>();
 
@@ -32,16 +34,15 @@ namespace StoneEntrevista.Application.Services
                     {
                         Nome = funcionario.Nome,
                         Matricula = funcionario.Matricula,
-                        ValorParticipacao = valorParticipacao
+                        ValorParticipacao = CurrencySerializer.DecimalToString(valorParticipacao)
                     }
                 );
             }
 
-            Distribuicao distribuicao = new Distribuicao();
+            DistribuicaoLucros distribuicao = new DistribuicaoLucros();
 
             distribuicao.TotalFuncionarios = participacoes.Count();
             distribuicao.TotalDisponibilizado =_totalDisponibilizado;
-                // .ToString("C2", CultureInfo.CreateSpecificCulture("pt-BR"));
             distribuicao.TotalDistribuido = totalDistribuido;
             distribuicao.SaldoTotalDisponibilizado =_totalDisponibilizado - totalDistribuido;
             distribuicao.Participacoes = participacoes;
