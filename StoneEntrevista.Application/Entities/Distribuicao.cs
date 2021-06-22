@@ -24,5 +24,9 @@ namespace StoneEntrevista.Application.Entities
         
         [JsonPropertyName("participacoes")]
         public List<Participacao> Participacoes { get; set; }
+
+        public Distribuicao()
+        {
+        }
     }
 }
