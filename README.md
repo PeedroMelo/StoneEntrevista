@@ -27,6 +27,9 @@ Caso a execução acima falhe, é possível executar utilizando o Docker Compose
 
     docker-compose up --build
 
+## Observação
+Como sugestão, no endpoint *[GET] api/participacao*, utilizar no parâmetro "total_disponibilizado" o valor de R$ 30.000,00 para obter o resultado válido logo de cara.
+
 ## Arquitetura
 Com o intuito de prover melhor coesão, mais organização e menos acoplamento possível, a arquitetura foi construída em base nos conceitos da Clean Architecture, onde é possível encontrar as camadas:
 
@@ -34,6 +37,7 @@ Com o intuito de prover melhor coesão, mais organização e menos acoplamento p
 - **Application**: Onde o *Core* do projeto se encontra. Aqui é possível encontrar todas as Entidades, Interfaces e Serviços que nossa aplicação utiliza. É pensada também para prover o compartilhamento de funcionalidades entre as diferentes camadas do projeto.
 - **Infra**: É a camada de acesso ao banco de dados. Foi pensada para conter a complexidade de operações e conexão, bem como ser flexível para eventuais trocas de bancos ou múltiplas conexões.
 - **Test.{Camada}**: Aqui, em uma camada específica para testes, cada diretório é repsonsável pelos testes unitários de suas devídas camadas. Em um processo mais avançado de CI/CD, é possível manter a camada de testes de integração dentro deste ambiente.
+
 ## Tecnologias
 - .NET Core 5.0
 - Swagger
