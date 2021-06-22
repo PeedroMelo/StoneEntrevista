@@ -15,7 +15,7 @@ No desenvolvimento do projeto, busquei mesclar alguns conceitos sobre API REST e
 Durante todo o processo, utilizei o **Visual Studio Code** + **.NET CLI** (com WSL2) para a execução de comandos, instalação de pacotes, criação dos arquivos *.csproj*, etc.
 
 ## Como executar
-É possível executar por meio do Visual Studio, ou utilizando a **.NET CLI**, a partir do comando:
+É possível executar o projeto utilizando a **.NET CLI**, a partir do comando:
 
     dotnet run --project StoneEntrevista.API/StoneEntrevista.API.csproj
 
