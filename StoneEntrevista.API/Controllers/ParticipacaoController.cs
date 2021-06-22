@@ -23,7 +23,7 @@ namespace ParticipacaoLucros.Controllers
         {
             if (totalDisponibilizado == 0)
             {
-                return StatusCode(401, "Campo \"Total disponibilizado\" não pode estar zerado.");
+                return StatusCode(401, new { message = "Campo 'total_disponibilizado' não pode estar zerado." });
             }
 
             DistribuicaoLucrosService distribuicaoLucrosService = new DistribuicaoLucrosService(totalDisponibilizado);
@@ -32,21 +32,21 @@ namespace ParticipacaoLucros.Controllers
 
             if (distribuicao.TotalFuncionarios == 0)
             {
-                return Content("Nenhum funcionário encontrado. Verifique a base de dados e tente novamente.");
+                return StatusCode(403, new { message = "Nenhum funcionário encontrado. Verifique a base de dados e tente novamente mais tarde." });
             }
 
             if (distribuicao.SaldoTotalDisponibilizado < 0)
             {
-                return Content("Infelizmente, valor disponibilizado foi menor que o valor distribuído.");
+                return StatusCode(400, new { messsage = "Infelizmente, valor disponibilizado foi menor que o valor distribuído." });
             }
 
             return Ok(new
             {
+                participacoes = distribuicao.Participacoes,
                 total_funcionarios = distribuicao.TotalFuncionarios,
-                total_distribuidos = CurrencySerializer.DecimalToString(distribuicao.TotalDistribuido),
+                total_distribuido = CurrencySerializer.DecimalToString(distribuicao.TotalDistribuido),
                 total_disponibilizado = CurrencySerializer.DecimalToString(distribuicao.TotalDisponibilizado),
                 saldo_total_disponibilizado = CurrencySerializer.DecimalToString(distribuicao.SaldoTotalDisponibilizado),
-                distribuicao.Participacoes
             });
         }
     }

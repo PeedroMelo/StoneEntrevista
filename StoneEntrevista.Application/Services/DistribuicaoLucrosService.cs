@@ -32,8 +32,8 @@ namespace StoneEntrevista.Application.Services
                 participacoes.Add(
                     new Participacao
                     {
-                        Nome = funcionario.Nome,
                         Matricula = funcionario.Matricula,
+                        Nome = funcionario.Nome,
                         ValorParticipacao = CurrencySerializer.DecimalToString(valorParticipacao)
                     }
                 );

@@ -32,22 +32,25 @@ namespace StoneEntrevista.API.Controllers
             var funcionario = _funcionariosRepository.GetById(matricula);
             if (funcionario == null)
             {
-				return NotFound();
+                return NotFound(new
+                {
+                    message = "Nenhum funcionário encontrado com o ID enviado."
+                });
             }
             return Ok(_funcionariosRepository.GetById(matricula));
         }
 
-		[HttpPost]
-		public ActionResult<Funcionario> AddFuncionario(Funcionario funcionario)
-		{
+        [HttpPost]
+        public ActionResult<Funcionario> AddFuncionario(Funcionario funcionario)
+        {
             Funcionario funcionarioData = _funcionariosRepository.GetById(funcionario.Matricula);
 
             if (funcionarioData == null)
             {
-			    _funcionariosRepository.Add(funcionario);
+                _funcionariosRepository.Add(funcionario);
             }
 
-			return Ok(_funcionariosRepository.GetById(funcionario.Matricula));
-		}
+            return Ok(_funcionariosRepository.GetById(funcionario.Matricula));
+        }
     }
 }
