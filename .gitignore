@@ -452,3 +452,11 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+StoneEntrevista.API/obj/project.assets.json
+StoneEntrevista.API/obj/project.nuget.cache
+StoneEntrevista.API/obj/StoneEntrevista.API.csproj.nuget.dgspec.json
+StoneEntrevista.API/obj/Debug/net5.0/StoneEntrevista.API.csproj.AssemblyReference.cache
+StoneEntrevista.Application/obj/project.assets.json
+StoneEntrevista.Application/obj/project.nuget.cache
+StoneEntrevista.Application/obj/StoneEntrevista.Application.csproj.nuget.dgspec.json
+.gitignore
